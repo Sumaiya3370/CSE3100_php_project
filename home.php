@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart-Study</title>
+    <title>Smart-Learning</title>
     <!--font awesome cdn link-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!--custom css file link-->
@@ -21,7 +21,7 @@
 <body>
     <div class="container">
         <header>  
-            <a href="#" class="logo">Smart<span>Study</span></a>
+            <a href="#" class="logo">Smart<span>Learning</span></a>
       
             <div id="menu" class="fas fa-bars"></div>
             <nav class="navbar">
@@ -52,6 +52,134 @@
                 <img src="images/home-img.jpg" alt="">
             </div>
         </section>
+        <!--counter section-->
+        <section class="count">
+            <div class="box-container">
+                <div class="box">
+                    <i class="fas fa-graduation-cap"></i>
+                    <div class="content">
+                    <h3>150+</h3>
+                    <p>Courses</p>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-user-graduate"></i>
+                <div class="content">
+                <h3>1300+</h3>
+                <p>Students</p>
+            </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-chalkboard-user"></i>
+                <div class="content">
+                <h3>80+</h3>
+                <p>Teachers</p>
+            </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-face-smile"></i>
+                <div class="content">
+                <h3>100%</h3>
+                <p>Satisfiction</p>
+                                 
+              </div>
+              </div>
+               
+            </section>
+            
+         <!--Subjects -->
+                    
+             <h1 class="heading">Our Popular Subjects</h1>
+            <section class="subjects">
+              
+            <div class="box">
+                <img src="images/graphics.jpg" alt="">
+                
+                <h3>Graphic Design</h3>
+                <p>12 module</p>
+                
+            </div>
+            <div class="box">
+                <img src="images/math.jpg" alt="">
+                
+                <h3>Mathematics</h3>
+                <p>12 module</p>
+                
+            </div>
+            <div class="box">
+                <img src="images/teaching.jpg" alt="">
+                
+                <h3>Teaching</h3>
+                <p>12 module</p>
+                
+            </div>
+            <div class="box">
+                <img src="images/engine.jpg" alt="">
+                
+                <h3>Enginnering</h3>
+                <p>12 module</p>
+                
+            </div>
+            <div class="box">
+                <img src="images/webdes.jpg" alt="">
+                
+                <h3>Web Design</h3>
+                <p>12 module</p>
+                
+            </div>
+            <div class="box">
+                <img src="images/digital market.jpg" alt="">
+                
+                <h3>Digital Marketing</h3>
+                <p>12 module</p>
+                
+            </div>
+            <div class="box">
+                <img src="images/datascience.jpg" alt="">
+                
+                <h3>Data-science</h3>
+                <p>12 module</p>
+                
+            </div>
+            <div class="box">
+                <img src="images/bioche.jpg" alt="">
+                
+                <h3>Bio-Chemistry</h3>
+                <p>12 module</p>
+                
+            </div>
+            <div class="box">
+                <img src="images/pharmecy.jpg" alt="">
+                
+                <h3>Pharmecy</h3>
+                <p>12 module</p>
+                
+            </div>
+                
+           
+
+        
+        
+        </section>
+        <!--about-->
+        <section class="about">
+              
+            <div class="box">
+                <img src="images/instructor.jpg" alt="">
+                
+            
+            <div class="about-text">
+                <h2>Want to share your knowledge? Join us a Mentor</h2>
+                <p>hgjhgjbjh</p>
+                <h4>Best Courses</h4>
+                <h5>Top Rated Instructors</h5>
+               </div>
+               </div>
+            </section>
+            
+        
+
+
         <!--footer section--->
         <section class="footer">
             <div class="box-container">
@@ -89,10 +217,11 @@
                 
             </div>
         </div>
+          <div class="credit">created by <span>Sumaiya Alam Ananna</span></div>
         </section>
 
 
-
+   
 
     </div>
 
