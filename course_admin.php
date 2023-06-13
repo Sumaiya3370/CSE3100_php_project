@@ -1,6 +1,19 @@
 <?php
     @include 'config.php';
 
+    // retrieve courses data from the database
+    $sql = "SELECT * FROM courses";
+    $result = $conn->query($sql);
+
+    //store the courses in an array
+    $courses = array();
+    if($result->num_rows > 0){
+        while($row = $result->fetch_assoc()){
+            $courses[] = $row;
+        }
+    }
+ $conn->close();
+
     session_start();
     if(!isset($_SESSION['admin_name'])){
         header('location:home.php');
@@ -44,9 +57,10 @@
        
         <!--course section-->
         <section class="course">
-            <div class="box">
-                <span class="amount">$59.99</span>
-                <img src="images/ht.jpg" alt="">
+            <?php foreach($courses as $course):?>
+                <div class="box">
+                <span class="amount"><?php echo $course['price']; ?></span>
+                <img src="images/<?php echo $course['image']; ?>" alt="">
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -54,168 +68,17 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                 </div>
-                <h3>HTML & CSS</h3>
-                <p>hghfjgjh</p>
+                <h3><?php echo $course['course']; ?></h3>
+                <p><?php echo $course['details']; ?></p>
                 <a href="#" class="btn">learn More</a>
                 <div class ="icons">
-                    <p><i class="far fa-clock"></i> 2 hours</p>
-                    <p><i class="far fa-calendar"></i> 6 months</p>
-                    <p><i class="far fa-book"></i> 12 modules</p>
+                    <p><i class="far fa-clock"></i><?php echo $course['daily']; ?></p>
+                    <p><i class="far fa-calendar"></i><?php echo $course['months']; ?></p>
+                    <p><i class="far fa-book"></i><?php echo $course['modules']; ?></p>
                 </div>
-            </div>
-            <div class= "box">
-                <span class="amount">$59.99</span>
-                <img src="images/jv.jpg" alt="">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
                 </div>
-                <h3>javascript</h3>
-                <p>hghfjgjh</p>
-                <a href="#" class="btn">learn More</a>
-                <div class ="icons">
-                    <p><i class="far fa-clock"></i> 2 hours</p>
-                    <p><i class="far fa-calendar"></i> 6 months</p>
-                    <p><i class="far fa-book"></i> 12 modules</p>
-                </div>
-            </div>
-            <div class="box">
-                <span class="amount">$59.99</span>
-                <img src="images/ph.jpg" alt="">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h3>PHP</h3>
-                <p>hghfjgjh</p>
-                <a href="#" class="btn">learn More</a>
-                <div class ="icons">
-                    <p><i class="far fa-clock"></i> 2 hours</p>
-                    <p><i class="far fa-calendar"></i> 6 months</p>
-                    <p><i class="far fa-book"></i> 12 modules</p>
-                </div>
-            </div>
-            <div class="box">
-                <span class="amount">$59.99</span>
-                <img src="images/graphic.jpg" alt="">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h3>Graphic Design</h3>
-                <p>hghfjgjh</p>
-                <a href="#" class="btn">learn More</a>
-                <div class ="icons">
-                    <p><i class="far fa-clock"></i> 2 hours</p>
-                    <p><i class="far fa-calendar"></i> 6 months</p>
-                    <p><i class="far fa-book"></i> 12 modules</p>
-                </div>
-            </div>
-            <div class="box">
-                <span class="amount">$59.99</span>
-                <img src="images/adobe.jpg" alt="">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h3>Adobe Illustrator</h3>
-                <p>hghfjgjh</p>
-                <a href="#" class="btn">learn More</a>
-                <div class ="icons">
-                    <p><i class="far fa-clock"></i> 2 hours</p>
-                    <p><i class="far fa-calendar"></i> 6 months</p>
-                    <p><i class="far fa-book"></i> 12 modules</p>
-                </div>
-            </div>
-            <div class="box">
-                <span class="amount">$59.99</span>
-                <img src="images/python.png" alt="">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h3>Python</h3>
-                <p>hghfjgjh</p>
-                <a href="#" class="btn">learn More</a>
-                <div class ="icons">
-                    <p><i class="far fa-clock"></i> 2 hours</p>
-                    <p><i class="far fa-calendar"></i> 6 months</p>
-                    <p><i class="far fa-book"></i> 12 modules</p>
-                </div>
-            </div>
-            <div class="box">
-                <span class="amount">$59.99</span>
-                <img src="images/photo.jpg" alt="">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h3>Photography</h3>
-                <p>hghfjgjh</p>
-                <a href="#" class="btn">learn More</a>
-                <div class ="icons">
-                    <p><i class="far fa-clock"></i> 2 hours</p>
-                    <p><i class="far fa-calendar"></i> 6 months</p>
-                    <p><i class="far fa-book"></i> 12 modules</p>
-                </div>
-            </div>
-            <div class="box">
-                <span class="amount">$59.99</span>
-                <img src="images/art.jpg" alt="">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h3>Art</h3>
-                <p>hghfjgjh</p>
-                <a href="#" class="btn">learn More</a>
-                <div class ="icons">
-                    <p><i class="far fa-clock"></i> 2 hours</p>
-                    <p><i class="far fa-calendar"></i> 6 months</p>
-                    <p><i class="far fa-book"></i> 12 modules</p>
-                </div>
-            </div>
-            <div class="box">
-                <span class="amount">$59.99</span>
-                <img src="images/digital marketing.jpg" alt="">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h3>Digital Marketing</h3>
-                <p>hghfjgjh</p>
-                <a href="#" class="btn">learn More</a>
-                <div class ="icons">
-                    <p><i class="far fa-clock"></i> 2 hours</p>
-                    <p><i class="far fa-calendar"></i> 6 months</p>
-                    <p><i class="far fa-book"></i> 12 modules</p>
-                </div>
-            </div>   
-        </section>
+                <?php endforeach; ?>
+            </section>
 
          <!--footer section--->
          <section class="footer">
