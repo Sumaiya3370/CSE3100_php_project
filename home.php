@@ -185,7 +185,7 @@
             <div class="box">
                 <h3>quick links</h3>
                 <a href="#">home</a>
-                <a href="#">course</a>
+                <a href="course.php">course</a>
                 <a href="#">teacher</a>
                 <a href="#">price</a>
                 <a href="#">review</a>
