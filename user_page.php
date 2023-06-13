@@ -233,6 +233,7 @@
                 <p><i class="fas fa-map-marker-alt"></i>Dhaka,Bangladesh</p>  
             </div>
         </div>
+        <div class="credit">created by <span>Sumaiya Alam Ananna</span></div>
         </section>
     </div>
 

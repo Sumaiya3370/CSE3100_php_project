@@ -75,7 +75,10 @@
             <div class="box-container">
                 <div class="box">
                     <h3>about us</h3>
-                    <p>gjgjhkjhkjhkhk</p>
+                    <p> we believe in the power of education and strive to make learning accessible to everyone, anytime, and anywhere.<br>
+                         Our platform is designed to offer a wide range of high-quality online courses, empowering learners to enhance their skills,<br>
+                          expand their knowledge, and achieve their personal and professional goals.</p>
+
             </div>
             <div class="box">
                 <h3>quick links</h3>
@@ -100,7 +103,9 @@
                 <p><i class="fas fa-map-marker-alt"></i>Dhaka,Bangladesh</p>
             </div>
         </div>
+        <div class="credit">created by <span>Sumaiya Alam Ananna</span></div>
         </section>
+        
     </div>
 
     <!--custom js file link-->
