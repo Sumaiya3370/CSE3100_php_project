@@ -46,8 +46,8 @@
                 <a href="review_user.php">review</a>
                 <a href="contact_user.php">contact</a>
                 <div id="profile-btn" class="profile-btn-container">
-        <div class="btn-wrapper">
-        <button class="btn">
+        <div class="btn-wrapper"> 
+        <button class="btn">      <!--logout show starts code-->
             <span>
                 <?php
                     echo $_SESSION['user_name'];
@@ -71,7 +71,7 @@
         </div>
         </div>
     </div>
-            </nav>
+            </nav>  <!--logout show ends -->
         </header>
        
         <!--course section-->

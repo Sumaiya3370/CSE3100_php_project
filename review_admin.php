@@ -1,5 +1,17 @@
 <?php
-    @include 'config.php';
+   @include 'config.php';
+    // retrieve teachers data from the database
+ $sql = "SELECT * FROM reviews";
+ $result = $conn->query($sql);
+
+ //store the teachers in an array
+ $reviews= array();
+ if($result->num_rows > 0){
+    while($row = $result->fetch_assoc()){
+        $reviews[] = $row;
+    }
+ }
+ $conn->close();
 
     session_start();
     if(!isset($_SESSION['admin_name'])){
@@ -61,6 +73,27 @@
         </header>
        
         <!--review section-->
+        <section class="review">
+        
+            <?php foreach($reviews as $review):?>
+                <div class="box">
+                <div class="student">
+                <div class="student-info">
+               
+                <img src="images/<?php echo $review['Profile']; ?>" alt="">
+                <div class="info">
+                <h3><?php echo $review['Name']; ?></h3>
+                <span ><?php echo $review['Occupation']; ?></span>
+            </div>
+            </div>
+                <i class="fas fa-quote-right"></i>
+            </div>
+                <p  class="text"><?php echo $review['Feedback']; ?></p>
+                
+                </div>
+                <?php endforeach; ?>
+            </section>
+        <!--
         <section class="review">
     <div class="box">
       <div class="student">
@@ -142,7 +175,7 @@
         <p class="text">ygjhgkhkugigiyfgkghkuhkhu</p>
       </div>
       
-        </section>
+        </section>-->
          <!--footer section--->
          <section class="footer">
             <div class="box-container">

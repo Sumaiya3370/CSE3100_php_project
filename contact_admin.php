@@ -1,6 +1,6 @@
 <?php
     @include 'config.php';
-    @include 'config.php';
+    
  if(isset($_POST['submit_contact'])){
         
     $name = mysqli_real_escape_string($conn, $_POST['name']);
@@ -8,15 +8,15 @@
     $subject = mysqli_real_escape_string($conn, $_POST['subject']);
     $message = mysqli_real_escape_string($conn, $_POST['message']);
     
-    $insert = "INSERT INTO contact_form(name, email, subject, message) VALUES('$name','$email','$subject','$message')";
+    $insert = "INSERT INTO contact_form(name, email, subject, message) VALUES('$name','$email','$subject','$message')";// insert value in to database
                 mysqli_query($conn, $insert);
                 header('location:admin_page.php');
 
  };
 
     session_start();
-    if(!isset($_SESSION['admin_name'])){
-        header('location:home.php');
+    if(!isset($_SESSION['admin_name'])){// back to home page after message 
+        header('location:home.php');   // same
     }
 ?>
 

@@ -1,5 +1,17 @@
 <?php
  @include 'config.php';
+ // retrieve teachers data from the database
+ $sql = "SELECT * FROM teachers";
+ $result = $conn->query($sql);
+
+ //store the teachers in an array
+ $courses = array();
+ if($result->num_rows > 0){
+    while($row = $result->fetch_assoc()){
+        $teachers[] = $row;
+    }
+ }
+ $conn->close();
 ?>
 
 <!DOCTYPE html>
@@ -34,6 +46,25 @@
         </header>
        
         <!-- teacher section-->
+        <section class="teacher">
+            <?php foreach($teachers as $teacher):?>
+                <div class="box">
+               
+                <img src="images/<?php echo $teacher['Profile']; ?>" alt="">
+                
+                <h3><?php echo $teacher['Name']; ?></h3>
+                <p><?php echo $teacher['Bio']; ?></p>
+
+                <div class="share">
+                <a href="'#" class="fab fa-facebook-f"></a>
+                <a href="'#" class="fab fa-twitter"></a>
+                <a href="'#" class="fab fa-instagram"></a>
+                <a href="'#" class="fab fa-linkedin"></a>
+            </div>
+                </div>
+                <?php endforeach; ?>
+            </section>
+        <!--
         <section class="teacher">
         <div class="box">
             <img src="images/tec 1.jpg" alt="">
@@ -80,7 +111,7 @@
             </div>
         </div>
        
-        </section>
+        </section>-->
          <!--footer section--->
          <section class="footer">
             <div class="box-container">

@@ -186,10 +186,10 @@
                 <h3>quick links</h3>
                 <a href="#">home</a>
                 <a href="course.php">course</a>
-                <a href="#">teacher</a>
-                <a href="#">price</a>
-                <a href="#">review</a>
-                <a href="#">contact</a>
+                <a href="teacher.php">teacher</a>
+                <a href="price.php">price</a>
+                <a href="review.php">review</a>
+                <a href="contact.php">contact</a>
                 
             </div>
             <div class="box">

@@ -1,5 +1,17 @@
 <?php
  @include 'config.php';
+ // retrieve reviews data from the database
+ $sql = "SELECT * FROM reviews";
+ $result = $conn->query($sql);
+
+ //store the reviews in an array
+ $reviews = array();
+ if($result->num_rows > 0){
+    while($row = $result->fetch_assoc()){
+        $reviews[] = $row;
+    }
+ }
+ $conn->close();
 ?>
 
 <!DOCTYPE html>
@@ -32,6 +44,27 @@
         </header>
        
         <!--review section-->
+        <section class="review">
+        
+            <?php foreach($reviews as $review):?>
+                <div class="box">
+                <div class="student">
+                <div class="student-info">
+               
+                <img src="images/<?php echo $review['Profile']; ?>" alt="">
+                <div class="info">
+                <h3><?php echo $review['Name']; ?></h3>
+                <span ><?php echo $review['Occupation']; ?></span>
+            </div>
+            </div>
+                <i class="fas fa-quote-right"></i>
+            </div>
+                <p  class="text"><?php echo $review['Feedback']; ?></p>
+                
+                </div>
+                <?php endforeach; ?>
+            </section>
+        <!--
         <section class="review">
     <div class="box">
       <div class="student">
@@ -118,7 +151,7 @@
          Even people with no prior knowledge of any visualization tools can become a master after completing this course".</p>
       </div>
       
-        </section>
+        </section>-->
          <!--footer section--->
          <section class="footer">
             <div class="box-container">
