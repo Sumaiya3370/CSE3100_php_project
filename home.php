@@ -1,6 +1,7 @@
 <?php
  @include 'config.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,10 +13,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!--custom css file link-->
     <link rel="stylesheet"  type="text/css" href="style 1.css">
-
-    
-
-
 </head>
 <body>
     <div class="container">
@@ -24,20 +21,14 @@
       
             <div id="menu" class="fas fa-bars"></div>
             <nav class="navbar">
-                <a href="home.html">home</a>
-                <a href="course.html">course</a>
-                <a href="teacher.html">teacher</a>
-                <a href="price.html">price</a>
-                <a href="review.html">review</a>
-                <a href="contact.html">contact</a>
+                <a href="home.php">home</a>
+                <a href="course.php">course</a>
+                <a href="teacher.php">teacher</a>
+                <a href="price.php">price</a>
+                <a href="review.php">review</a>
+                <a href="contact.php">contact</a>
                 <a href="login.php">login</a>
-           
-
-
-
-
             </nav>
-            
         </header>
         
         <!--home section-->
@@ -176,7 +167,8 @@
                </div>
                </div>
             </section>
-           
+            
+        
 
 
         <!--footer section--->
@@ -184,9 +176,11 @@
             <div class="box-container">
                 <div class="box">
                     <h3>about us</h3>
-                        <p> we believe in the power of education and strive to make learning accessible to everyone, anytime, and anywhere.<br>
+                    <p> we believe in the power of education and strive to make learning accessible to everyone, anytime, and anywhere.<br>
                          Our platform is designed to offer a wide range of high-quality online courses, empowering learners to enhance their skills,<br>
                           expand their knowledge, and achieve their personal and professional goals.</p>
+
+                    
             </div>
             <div class="box">
                 <h3>quick links</h3>

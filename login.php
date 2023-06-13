@@ -17,10 +17,10 @@
         $result = mysqli_query($conn, $select);
 
         if(mysqli_num_rows($result) > 0){
-            $error[] = "Account already exists!";
+            $Rerror[] = "Account already exists!";
         }else{
             if($pass != $cpass){
-                $error[] = "Password not matched!";
+                $Rerror[] = "Password not matched!";
             }else{
                 $insert = "INSERT INTO user_form(name, email, password, user_type) VALUES('$name','$email','$pass','$user_type')";
                 mysqli_query($conn, $insert);
@@ -30,7 +30,7 @@
     }
 
     //login codes
-    if(isset($_POST['submit'])){
+    if(isset($_POST['submit_login'])){
         $email = mysqli_real_escape_string($conn, $_POST['email']);
         $pass = md5($_POST['password']);
 
@@ -48,7 +48,7 @@
                 header('location:user_page.php');
             }
         }else{
-            $error[] = 'Incorrect email or password!';
+            $Lerror[] = 'Incorrect email or password!';
         }
     };
 
@@ -65,14 +65,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!--custom css file link-->
     <link rel="stylesheet" type="text/css" href="style.css">
-
-    
-
-
 </head>
 <body>
-    
-
    <div class="page">
         <div class="form-box">
             <div class="button-box">
@@ -81,27 +75,38 @@
                 <button type="button" class="toggle-btn" onclick="register()">Register</button>
             </div>
             
-            
         <form id="login" method="POST" class="input-group">
             <?php
-                if(isset($error)){
-                    foreach($error as $error){
-                        echo '<span>' .$error. '</span>';
+                if(isset($Lerror)){
+                    foreach($Lerror as $error){
+                        echo '<p style="margin-top: 100px
+                        display: block;
+                        background-color: crimson;
+                        color: #fff;
+                        border-radius: 5px;
+                        font-size: 15px;
+                        padding: 5px;">' .$error. '</p>';
                     };
                 };
             ?>
             <input type="text" name="email" class="input-field" placeholder="Email" required>
             <input type="password" name="password" class="input-field" placeholder="Enter Passward" required>
             <input type="checkbox" class="check-box"><span>Rembember Passward</span>
-            <button type="submit" name="submit" class="submit-btn"> Log in</button>
+            <button type="submit" name="submit_login" class="submit-btn"> Log in</button>
         </form>
         <form id="register" method="POST" class="input-group">
             <?php
-                /* if(isset($error)){
-                    foreach($error as $error){
-                        echo '<span>.$error.</span>';
-                    }
-                } */
+                if(isset($Rerror)){
+                    foreach($Rerror as $error){
+                        echo '<p style="margin-top: 100px
+                        display: block;
+                        background-color: crimson;
+                        color: #fff;
+                        border-radius: 5px;
+                        font-size: 15px;
+                        padding: 5px;">' .$error. '</p>';
+                    };
+                };
             ?>
             <input type="text" name="name" class="input-field" placeholder="User Id" required>
             <input type="email" name="email" class="input-field" placeholder="Email Id" required>
@@ -115,9 +120,8 @@
             <button type="submit" name="submit" class="submit-btn">Register</button>
         </form>
         </div>
-        
-
     </div>
+
     <script>
         var x=document.getElementById("login");
         
@@ -133,8 +137,6 @@
             y.style.left="450px";
             z.style.left="0px";
         }
-
-        
 
     </script>
 </body>

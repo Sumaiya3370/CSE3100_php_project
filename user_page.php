@@ -2,7 +2,7 @@
     @include 'config.php';
 
     session_start();
-    if(!isset($_SESSION['admin_name'])){
+    if(!isset($_SESSION['user_name'])){
         header('location:home.php');
     }
 ?>
@@ -28,18 +28,18 @@
       
             <div id="menu" class="fas fa-bars"></div>
             <nav class="navbar">
-                <a href="admin_page.php">home</a>
-                <a href="course_admin.php">course</a>
-                <a href="teacher.php">teacher</a>
-                <a href="price.php">price</a>
-                <a href="review.php">review</a>
-                <a href="contact.php">contact</a>
+                <a href="user_page.php">home</a>
+                <a href="course_user.php">course</a>
+                <a href="teacher_user.php">teacher</a>
+                <a href="price_user.php">price</a>
+                <a href="review_user.php">review</a>
+                <a href="contact_user.php">contact</a>
                 <div id="profile-btn" class="profile-btn-container">
         <div class="btn-wrapper">
         <button class="btn">
             <span>
                 <?php
-                    echo $_SESSION['admin_name'];
+                    echo $_SESSION['user_name'];
                 ?>
             </span>
         </button>
@@ -60,7 +60,7 @@
         </div>
         </div>
     </div>
-            </nav>
+            </nav> 
         </header>
         
         <!--home section-->
@@ -208,9 +208,7 @@
                     <h3>about us</h3>
                     <p> we believe in the power of education and strive to make learning accessible to everyone, anytime, and anywhere.<br>
                          Our platform is designed to offer a wide range of high-quality online courses, empowering learners to enhance their skills,<br>
-                          expand their knowledge, and achieve their personal and professional goals.</p>
-
-                    
+                          expand their knowledge, and achieve their personal and professional goals.</p>    
             </div>
             <div class="box">
                 <h3>quick links</h3>
@@ -220,7 +218,6 @@
                 <a href="#">price</a>
                 <a href="#">review</a>
                 <a href="#">contact</a>
-                
             </div>
             <div class="box">
                 <h3>follow us</h3>
@@ -228,21 +225,16 @@
                 <a href="#">twitter</a>
                 <a href="#">instagram</a>
                 <a href="#">linkedin</a>
-                
             </div>
             <div class="box">
                 <h3>contact us</h3>
                 <p><i class="fas fa-phone"></i>+123-765-12356</p>
                 <p><i class="fas fa-envelope"></i>StudyLearning@gmail.com</p>
-                <p><i class="fas fa-map-marker-alt"></i>Dhaka,Bangladesh</p>
-
-                
+                <p><i class="fas fa-map-marker-alt"></i>Dhaka,Bangladesh</p>  
             </div>
         </div>
         </section>
-
     </div>
-
 
     <!--custom js file link-->
     <script src="js/script.js"></script>
