@@ -1,7 +1,6 @@
 <?php
  @include 'config.php';
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -170,14 +169,14 @@
             
             <div class="about-text">
                 <h2>Want to share your knowledge? Join us a Mentor</h2>
-                <p>hgjhgjbjh</p>
+                <p>"I assist learners in finding new effectives belief and get eid of the outdated <br>,discouraged
+                  and irrelevant life attitudes.You're upgrading to be a better you".</p>
                 <h4>Best Courses</h4>
                 <h5>Top Rated Instructors</h5>
                </div>
                </div>
             </section>
-            
-        
+           
 
 
         <!--footer section--->
@@ -185,9 +184,9 @@
             <div class="box-container">
                 <div class="box">
                     <h3>about us</h3>
-                    <p>.</p>
-
-                    
+                        <p> we believe in the power of education and strive to make learning accessible to everyone, anytime, and anywhere.<br>
+                         Our platform is designed to offer a wide range of high-quality online courses, empowering learners to enhance their skills,<br>
+                          expand their knowledge, and achieve their personal and professional goals.</p>
             </div>
             <div class="box">
                 <h3>quick links</h3>

@@ -48,7 +48,8 @@
         </div>
         <i class="fas fa-quote-right"></i>
       </div>
-      <p class="text">ygjhgkhkugigiyfgkghkuhkhu</p>
+      <p class="text">"Even more important than knowledge is confidence, which I have gained through my learning journey.<br>
+       No matter what you are looking to learn or gain confidence in, Smart learning is something for you"</p>
 
     </div>
 
@@ -64,8 +65,8 @@
           </div>
           <i class="fas fa-quote-right"></i>
         </div>
-        <p class="text">ygjhgkhkugigiyfgkghkuhkhu</p>
-  
+        <p class="text">"Earning my IT certificates helped me demonstrate my knowledge to recruiters and enhanced my standing as an applicant<br>
+        .Now I love my new job in the tech industry"</p>
       </div>
       <div class="box">
         <div class="student">
@@ -78,7 +79,8 @@
           </div>
           <i class="fas fa-quote-right"></i>
         </div>
-        <p class="text">ygjhgkhkugigiyfgkghkuhkhu</p>
+        <p class="text">"The programme totally changed my life.I have this career in front of me now that wasn't even in sight before and it's what I want to be doing 
+          <br> That's really powerful " </p>
   
       </div>
       <div class="box">
@@ -92,8 +94,10 @@
           </div>
           <i class="fas fa-quote-right"></i>
         </div>
-        <p class="text">ygjhgkhkugigiyfgkghkuhkhu</p>
-  
+        <p class="text">
+                I am proud to say that after a few months of taking this course<br>
+                 I passed my exam and am now an AWS Certified Cloud Practitioner! This content was exactly what the CCP exam covered.</p>
+        
       </div>
       <div class="box">
         <div class="student">
@@ -106,7 +110,8 @@
           </div>
           <i class="fas fa-quote-right"></i>
         </div>
-        <p class="text">ygjhgkhkugigiyfgkghkuhkhu</p>
+        <p class="text">"One of the best courses on management and leadership I have come across so far<br>
+         The advice is practical, and examples highly relatable. Would help anyone become a better manager".</p>
   
       </div>
       <div class="box">
@@ -120,7 +125,8 @@
           </div>
           <i class="fas fa-quote-right"></i>
         </div>
-        <p class="text">ygjhgkhkugigiyfgkghkuhkhu</p>
+        <p class="text">"I highly recommend this course for all budding data scientists<br>
+         Even people with no prior knowledge of any visualization tools can become a master after completing this course".</p>
   
       </div>
       
