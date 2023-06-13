@@ -1,12 +1,24 @@
 <?php
     @include 'config.php';
+    
+ if(isset($_POST['submit_contact'])){
+        
+    $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $subject = mysqli_real_escape_string($conn, $_POST['subject']);
+    $message = mysqli_real_escape_string($conn, $_POST['message']);
+    
+    $insert = "INSERT INTO contact_form(name, email, subject, message) VALUES('$name','$email','$subject','$message')";
+                mysqli_query($conn, $insert);
+                header('location:user_page.php');
+
+ };
 
     session_start();
     if(!isset($_SESSION['user_name'])){
         header('location:home.php');
     }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,20 +80,20 @@
                 <img src="images/contact.jpg" alt="">
             </div>
             
-            <form action="">
+            < <form action="" method="POST">
             
-                <div class="inputBox">
-                    <input type="text" placeholder="name">
-                    <input type="email" placeholder="email">
-                </div>
-            
-                <input type="text" placeholder="subject" class="box">
-            
-                <textarea placeholder="message" name="" id="" cols="30" rows="10"></textarea>
-            
-                <input type="submit" class="btn" value="send">
-            
-            </form>
+            <div class="inputBox">
+                <input type="text" name="name" placeholder="name">
+                <input type="email" name="email"  placeholder="email">
+            </div>
+        
+            <input type="text"  name="subject" placeholder="subject" class="box">
+        
+            <textarea placeholder="message" name="message" id="" cols="30" rows="10"></textarea>
+        
+            <input type="submit" class="btn" name="submit_contact" value="send">
+        
+        </form>
             </section>
             
          <!--footer section--->
