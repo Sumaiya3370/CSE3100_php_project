@@ -207,8 +207,8 @@ color: var(--pink);
  }
  .home .content p{
      padding: .5rem 0;
-     font-size: 1.7rem;
-     color:black;
+     font-size: 1.9rem;
+     color:var(--black);
 
  }
  .count .box-container{
@@ -319,6 +319,52 @@ color: var(--pink);
        color: var(--pink);
     
  }
+ .status{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+}
+.status .box1{
+  flex:1 1 30rem;
+  border-radius: 3rem;
+  border:.07rem solid rgba(0,0,0,.1);
+  padding:1rem;
+  position: relative;
+}
+.status .box1 img{
+  height:30rem;
+  width: 50%;
+  position: center;
+}
+ .skill-container{
+  width:90%;
+  background-color: white;
+  margin:0px 10px;
+  font-size: 50px;
+}
+.skill{
+  text-align:right;
+  padding-top: 2px;
+  padding-bottom:2px;
+  color: var(--pink);
+  font-size: 50px;
+}
+.joyful{
+  width:70%;
+  background-color: var(--pink);
+  font-size: 50px;
+}
+.attentive{
+  width:50%;
+  background-color:var(--violet);
+  font-size: 50px;
+}
+.engaging{
+  width:10%;
+  background-color: rgba(145, 38, 38, 0.434);
+  font-size: 50px;
+}
+
      
  .course{
     display: flex;
@@ -624,7 +670,7 @@ gap: 1.5rem;
 
     display: block;
     font-size: 1.5rem;
-    color: #666;
+    color: black;
     padding: .7rem 0;
 }
 .footer .box-container .box a:hover{

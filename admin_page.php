@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart-Study</title>
+    <title>Spark-Ed</title>
     <!--font awesome cdn link-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!--custom css file link-->
@@ -24,7 +24,7 @@
 <body>
     <div class="container">
         <header>  
-            <a href="#" class="logo">Smart<span>Study</span></a>
+            <a href="#" class="logo">Spark<span>Ed</span></a>
       
             <div id="menu" class="fas fa-bars"></div>
             <nav class="navbar">
@@ -174,7 +174,7 @@
             <div class="box">
                 <img src="images/pharmecy.jpg" alt="">
                 
-                <h3>Pharmecy</h3>
+                <h3>Pharmacy</h3>
                 <p>12 module</p>
                 
             </div>
@@ -200,6 +200,33 @@
                </div>
                </div>
             </section>
+             <!--status section-->
+        <section class="status">
+        <div class="box1">
+                <div class="heading">
+                    <p>Differentiate Your Classroom <br>What makes us special</p>
+                </div>
+                
+                <p class="p1">Joyful
+                    <div class="skill-container">
+                        <div class="skill joyful"></div>
+                    </div>
+                </p>
+                <p class="p1">Attentive
+                    <div class="skill-container">
+                        <div class="skill attentive"></div>
+                    </div>
+                </p>
+                <p class="p1">Engaging
+                    <div class="skill-container">
+                        <div class="skill engaging"></div>
+                    </div>
+                </p>
+               
+
+             </div>
+</section>
+
 
         <!--footer section--->
         <section class="footer">
@@ -214,12 +241,12 @@
             </div>
             <div class="box">
                 <h3>quick links</h3>
-                <a href="#">home</a>
-                <a href="#">course</a>
-                <a href="#">teacher</a>
-                <a href="#">price</a>
-                <a href="#">review</a>
-                <a href="#">contact</a>
+                <a href="admin_page.php">home</a>
+                <a href="course_admin.php">course</a>
+                <a href="teacher_admin.php">teacher</a>
+                <a href="price_admin.php">price</a>
+                <a href="review_admin.php">review</a>
+                <a href="contact_admin.php">contact</a>
                 
             </div>
             <div class="box">
@@ -233,7 +260,7 @@
             <div class="box">
                 <h3>contact us</h3>
                 <p><i class="fas fa-phone"></i>+123-765-12356</p>
-                <p><i class="fas fa-envelope"></i>StudyLearning@gmail.com</p>
+                <p><i class="fas fa-envelope"></i>SparkEd@gmail.com</p>
                 <p><i class="fas fa-map-marker-alt"></i>Dhaka,Bangladesh</p>
 
                 
